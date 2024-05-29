@@ -1,0 +1,26 @@
+meta:
+    # List of active pixel manipulations. Full list = ["transparent", "tran-upscaled noise", "tran-col-upscaled noise", "gray-upscaled noise", "mean-upscaled noise", "given-texture"]
+    pixel_manipulations: ["transparent", "tran-upscaled noise", "tran-col-upscaled noise", "gray-upscaled noise", "mean-upscaled noise"]
+    # List of active shapes. Full list = ["complex-uniform", "rough", "uniform", "scratch"]
+    shapes: ["spattered", "elongated", "rough", "complex"]
+    # Edge values of size distribution. These values define the lower and upper bound of size histogram bins for the ratios of altered pixels to total number of pixels. 
+    size_edges: [0.0002, 0.001, 0.005, 0.015, 0.025, 0.15] 
+    # Defines how often each type of synthetic anomalous image should be created from each original image
+    multiples: 3
+
+shape:
+    baseDim: [500, 800]                         # Panel size for the creation of anomaly shapes
+    sizeFactor: [0.5, 0.75]                     # Scale factor for the base size unit (0.30, 0.65)
+    innerWidthFactor: [0.03, 0.20]              # Factor for controlling the width to height ratio of clusters centers
+    outerCircleFactor: [0.03, 0.10]             # Defining the size of additional border around cluster centers
+    centers: [5,15]                             # Number of cluster centers
+    gaussianKernelFactor: 0.05                  # Gaussian Kernel size for initial shape creation
+    gaussianSigmaFactor: 0.07                   # Gaussian sigma value for initial shape creation
+    baseVal: 0.2                                # Base value for shape creation
+    threshold: 0.3                              # Threshold for shape creation
+texture:
+    # Pixel manipulations: the values define the lower and upper bounds of an uniform distribution for R,G,B factors (the first two for darker, the letter two for brighter anomalies).
+    brighnessFactors: [0.3, 0.8, 1.2, 1.5]  
+    # smoothingKernel and smoothingSigma define the Gaussian parameters for smooting the edges of anomalies.    
+    smoothingKernel: 3                          
+    smoothingSigma: 2
