@@ -4,7 +4,7 @@ SYNAGEN enables users to generate synthetic datasets by inserting synthetic anom
 Clone this repository. SYNAGEN was tested with Python versions 3.8.19 and 3.11.4.
 ``` shell
 # go to SYNAGEN folder
-cd /.../SYNAGEN
+cd /.../synagen
 # pip install required packages
 pip install -r requirements.txt
 ```
